@@ -1,0 +1,31 @@
+ 
+AWSTemplateFormatVersion: "2019-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: API de envios
+Resources:
+  Envios:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: indexlambda.handler
+      Runtime: nodejs10.x
+      Events:
+        NuevoEnvio:
+          Type: Api
+          Properties:
+            Path: /envios
+            Method: post
+        EnvioId:
+          Type: Api
+          Properties:
+            Path: /envios/{envioID}
+            Method: get
+        EnviosPendiendtes:
+          Type: Api
+          Properties:
+            Path: /envios/enviospendientes
+            Method: get
+        EnvioEntregado:
+          Type: Api
+          Properties:
+            Path: /envios/{envioID}/envioentregado
+            Method: post
