@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/GerardoSevillano/cloud-tp3-sevillano#readme",
   "dependencies": {
-    "aws-sdk": "^2.538.0"
+    "aws-sdk": "^2.814.0"
   }
 }
